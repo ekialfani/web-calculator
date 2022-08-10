@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Rationale&display=swap');
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+
+body {
+	font-family: 'Poppins', sans-serif;
+}
+
+.container {
+	padding: 20px;
+}
+
+.container-column {
+	max-width: 500px;
+	background-color: #1e293b;
+	margin: auto;
+	padding: 60px 20px 20px;
+	border-radius: 20px;
+	display: flex;
+	flex-direction: column;
+}
+
+.container-row {
+	display: flex;
+	justify-content: space-between;
+}
+
+.display {
+	background-color: #f1f5f9;
+	padding: 15px 10px;
+	border-radius: 10px;
+	margin-bottom: 30px;
+}
+
+#display-number {
+	font-family: 'Rationale', sans-serif;
+	font-size: 4em;
+	text-align: right;
+}
+
+.button {
+	flex-basis: 23%;
+	background-color: #e2e8f0;
+	margin-bottom: 15px;
+	padding: 15px 10px;
+	text-align: center;
+	font-size: 1.2em;
+	font-weight: 600;
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.double {
+	flex-basis: 48%;
+}
+
+.button:hover {
+	background-color: #94a3b8;
+}
+
+.button:active {
+	background-color: #e2e8f0;
+}
+
+.operator, .negative {
+	background-color: #64748b;
+	color: white;
+}
+
+.operator:hover, .negative:hover {
+	background-color: #334155;
+}
+
+.operator:active, .negative:active {
+	background-color: #64748b;
+}
+
+.clear, .equals {
+	background-color: #ef4444;
+	color: white;
+}
+
+.clear:hover, .equals:hover {
+	background-color: #b91c1c;
+}
+
+.clear:active, .equals:active {
+	background-color: #ef4444;
+}
