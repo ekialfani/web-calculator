@@ -14,7 +14,12 @@ function updateDisplay() {
 }
 
 function inputNumber(number){
-	calculator.displayNumber += number;
+	if(number !== '.' && calculator.displayNumber == '0'){
+		calculator.displayNumber = number;
+	}else {
+		calculator.displayNumber += number;
+	}
+
 }
 
 
@@ -25,6 +30,6 @@ buttons.forEach(button => {
 		const target = e.target;
 
 		inputNumber(target.textContent);
-		updateDisplay();		
+		updateDisplay();
 	})
 })
