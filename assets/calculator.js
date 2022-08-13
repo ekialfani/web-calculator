@@ -20,6 +20,16 @@ function clearDisplay(){
 	calculator.isWaitForSecondNumber = false;
 }
 
+
+function inverseNumber(){
+	if(calculator.displayNumber == '0'){
+		return;
+	}
+
+	calculator.displayNumber *= -1;
+
+}
+
 function inputNumber(number){
 	const displayNumber = calculator.displayNumber;
 	const operator = calculator.operator;
@@ -41,6 +51,13 @@ buttons.forEach(button => {
 
 		if(target.classList.contains('clear')){
 			clearDisplay();
+			updateDisplay();
+
+			return;
+		}
+
+		if(target.classList.contains('negative')){
+			inverseNumber();
 			updateDisplay();
 
 			return;
