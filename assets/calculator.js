@@ -45,8 +45,11 @@ function inputNumber(number){
 
 
 function handleOperator(operator){
-	if(!calculator.isWaitForSecondNumber){
-		calculator.firstNumber = calculator.displayNumber;
+	const isWaitForSecondNumber = calculator.isWaitForSecondNumber;
+	const displayNumber = calculator.displayNumber;
+
+	if(!isWaitForSecondNumber){
+		calculator.firstNumber = displayNumber;
 		calculator.operator = operator;
 
 		calculator.displayNumber = operator;
@@ -91,7 +94,18 @@ function performCalculation(){
 			result = firstNumber % secondNumber;
 	}
 
+
+	const history = {
+		firstNumber: firstNumber,
+		operator: operator,
+		secondNumber: secondNumber,
+		result: result,
+	}
+
+
+	putHistory(history);
 	calculator.displayNumber = result;
+	renderHistory();
 }
 
 
