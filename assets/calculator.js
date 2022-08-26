@@ -22,9 +22,10 @@ function clearDisplay(){
 
 
 function inverseNumber(){
-	if(calculator.displayNumber === '0'){
-		return;
-	}
+	const displayNumber = calculator.displayNumber;
+	const operator = calculator.operator;
+
+	if(displayNumber === '0' || displayNumber === operator) return;
 
 	calculator.displayNumber *= -1;
 
@@ -64,11 +65,10 @@ function handleOperator(operator){
 function performCalculation(){
 	const firstNumber = Number(calculator.firstNumber);
 	const operator = calculator.operator;
-	const secondNumber = Number(calculator.displayNumber);
+	const displayNumber = calculator.displayNumber;
+	const secondNumber = (displayNumber !== operator) ? Number(displayNumber) : 0;
 
-	if(firstNumber === null || operator === null){
-		return;
-	}
+	if(firstNumber === null || operator === null) return;
 
 
 	let result = 0;
@@ -96,12 +96,11 @@ function performCalculation(){
 
 
 	const history = {
-		firstNumber: firstNumber,
-		operator: operator,
-		secondNumber: secondNumber,
-		result: result,
+		firstNumber,
+		operator,
+		secondNumber,
+		result,
 	}
-
 
 	putHistory(history);
 	calculator.displayNumber = result;
