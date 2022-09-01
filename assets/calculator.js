@@ -87,7 +87,7 @@ function performCalculation(){
 			break;
 
 		case '÷':
-			temp = firstNumber / secondNumber;
+			const temp = firstNumber / secondNumber;
 			result = temp.toFixed(2);
 			break;
 
