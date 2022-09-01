@@ -1,12 +1,18 @@
 <h1 align="center">Web Calculator</h1>
 
 <div>
-  <img src="assets/img/web-calculator-screenshoot.png">
+  <img src="assets/img/screenshoot.png">
 <div>
 
 <br>
 
-<p align="center">Web Calculator is a web-based application that allows us to perform simple arithmetic operations such as addition, subtraction, multiplication, and others. When we do the calculation process, the history will be saved automatically into web storage and will be displayed in tabular form.</p>
+<div align="center">
+    <p>Web Calculator is a web-based application that allows us to perform simple arithmetic operations such as addition, subtraction, multiplication, and others. When we do the calculation process, the history will be saved automatically into web storage and will be displayed in tabular form.</p>
+    <br>
+    <a href="https://ekialfani.github.io/web-calculator/">View Demo</a>
+    &nbsp;·&nbsp;
+    <a href="https://github.com/ekialfani/web-calculator/issues">Report Bug</a>
+</div>
 
 <br>
 <br>
